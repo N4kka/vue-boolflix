@@ -2,8 +2,13 @@
   <header>
     <h1>BOOLFLIX</h1>
     <div class="searchbar">
-      <input type="text" name="Searchbar" id="" />
-      <button>Search</button>
+      <input
+        type="text"
+        placeholder="Search Movies"
+        v-model="name"
+        id="movies"
+      />
+      <button @click="$emit('search', name)">Search</button>
     </div>
   </header>
 </template>
@@ -11,6 +16,11 @@
 <script>
 export default {
   name: "AppHeader",
+  data() {
+    return {
+      name: "",
+    };
+  },
 };
 </script>
 
