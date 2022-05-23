@@ -3,6 +3,10 @@
     <ul v-for="(item, index) in movies" :key="index">
       <li>
         <h4>{{ item.title }}</h4>
+        <img
+          :src="'http://image.tmdb.org/t/p/w500/' + item.poster_path"
+          alt=""
+        />
         <h4>{{ item.original_title }}</h4>
         <FlagIcon :languageCode="item.original_language">{{
           item.original_language
@@ -37,6 +41,7 @@ export default {
   components: {
     FlagIcon,
   },
+  methods: {},
 };
 </script>
 
@@ -50,6 +55,10 @@ main {
   li {
     color: white;
     font-size: 20px;
+
+    img {
+      width: 15%;
+    }
   }
 }
 </style>
