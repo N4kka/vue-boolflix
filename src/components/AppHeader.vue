@@ -8,7 +8,7 @@
         v-model="name"
         id="movies"
       />
-      <button @click="$emit('search', name)">Search</button>
+      <button class="search-btn" @click="$emit('search', name)">Search</button>
     </div>
   </header>
 </template>
@@ -40,6 +40,25 @@ header {
 
   .searchbar {
     margin-right: 2rem;
+
+    input {
+      width: 200px;
+      padding: 5px 10px;
+      border: 0px solid transparent;
+      border-radius: 5px;
+      margin-left: 1rem;
+      color: red;
+      background-color: white;
+    }
+
+    .search-btn {
+      padding: 5px 20px;
+      border: 0px solid light transparent;
+      border-radius: 5px;
+      margin-left: 1rem;
+      color: white;
+      background-color: red;
+    }
   }
 }
 </style>

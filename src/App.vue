@@ -36,6 +36,9 @@ export default {
         )
         .then((resp) => {
           this.movies = resp.data.results;
+          this.movies.forEach((item) => {
+            item.starRating = parseInt(Math.ceil(item.vote_average / 2))
+          })
         });
     },
     tvSeries(querySearch) {
@@ -45,6 +48,9 @@ export default {
         )
         .then((response) => {
           this.tvShows = response.data.results;
+          this.tvShows.forEach((item) => {
+            item.starRating =parseInt(Math.ceil(item.vote_average / 2))
+          })
         });
     },
   },
