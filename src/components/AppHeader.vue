@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>BOOLFLIX</h1>
+    <img src="../assets/boolflix-logo.png" alt=""/>
     <div class="searchbar">
       <input
         type="text"
@@ -32,10 +32,8 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  h1 {
-    color: red;
-    line-height: 100px;
-    margin-left: 2rem;
+  img {
+    margin: 25px;
   }
 
   .searchbar {
