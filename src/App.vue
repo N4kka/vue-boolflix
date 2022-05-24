@@ -36,7 +36,6 @@ export default {
         )
         .then((resp) => {
           this.movies = resp.data.results;
-          console.log(this.movies);
         });
     },
     tvSeries(querySearch) {
@@ -46,7 +45,6 @@ export default {
         )
         .then((response) => {
           this.tvShows = response.data.results;
-          console.log(this.tvShows);
         });
     },
   },
