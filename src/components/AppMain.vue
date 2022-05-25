@@ -13,7 +13,15 @@
             }"
           >
             <div class="info">
-              <h4 v-if="item.title == item.original_title ? item.title : item.original_title">{{ item.title }}</h4>
+              <h4
+                v-if="
+                  item.title == item.original_title
+                    ? item.title
+                    : item.original_title
+                "
+              >
+                {{ item.title }}
+              </h4>
               <!-- <h4>{{ item.original_title }}</h4> -->
               <FlagIcon :languageCode="item.original_language">{{
                 item.original_language
@@ -44,7 +52,15 @@
             }"
           >
             <div class="info">
-              <h4 v-if="item.name == item.original_name ? item.name : item.original_name">{{ item.name }}</h4>
+              <h4
+                v-if="
+                  item.name == item.original_name
+                    ? item.name
+                    : item.original_name
+                "
+              >
+                {{ item.name }}
+              </h4>
               <FlagIcon :languageCode="item.original_language">{{
                 item.original_language
               }}</FlagIcon>
@@ -110,6 +126,14 @@ main {
         color: white;
         font-size: 20px;
         padding: 30px 15px;
+      }
+
+      .info {
+        display: block;
+      }
+
+      .info:hover {
+        display: none;
       }
 
       .no-img {
